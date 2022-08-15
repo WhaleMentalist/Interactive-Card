@@ -26,7 +26,7 @@ input[type="text"] {
   padding: 0 0 0 10px;
   margin: 10px 20px 20px 0;
   height: 40px;
-  border: 1px solid var(--light-gray);
+  border: 2px solid var(--light-gray);
   border-radius: 5px;
   outline: none !important;
 }
@@ -44,6 +44,7 @@ label, input[type="text"] {
 }
 
 .background {
+  position: relative;
   min-height: 100vh;
   min-width: 100%;
   background-image: url('../images/bg-main-desktop.png');
@@ -65,6 +66,20 @@ label, input[type="text"] {
 .column-container {
   display: flex;
   flex-direction: column;
+}
+
+.credit-card-front {
+  position: absolute;
+  top: 175px;
+  left: 125px;
+  z-index: 1;
+}
+
+.credit-card-back {
+  position: absolute;
+  top: 452px;
+  left: 175px;
+  z-index: 1;
 }
 
 .left-float {
