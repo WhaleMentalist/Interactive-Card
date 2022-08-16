@@ -98,14 +98,14 @@ label, input[type="text"] {
 .credit-card-front {
   position: absolute;
   top: 175px;
-  left: 125px;
+  left: 150px;
   z-index: 1;
 }
 
 .credit-card-back {
   position: absolute;
   top: 452px;
-  left: 175px;
+  left: 200px;
   z-index: 1;
 }
 
@@ -148,7 +148,7 @@ label, input[type="text"] {
   text-align: center;
 }
 
-#credit-card-holder {
+#card-holder {
   position: absolute;
   left: 40px;
   bottom: 20px;
@@ -156,10 +156,18 @@ label, input[type="text"] {
   letter-spacing: 2px;
 }
 
-#expiration-date {
+#expiration {
   position: absolute;
   right: 40px;
   bottom: 20px;
   font-size: 14px;
   letter-spacing: 2px;
+}
+
+#cvc {
+  position: absolute;
+  top: 98px;
+  right: 50px;
+  font-size: 14px;
+  letter-spacing: 4px;
 }
