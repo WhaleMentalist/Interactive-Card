@@ -69,6 +69,7 @@ label, input[type="text"] {
 }
 
 .main-container {
+  min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr 2fr;
   justify-items: center;
@@ -138,11 +139,11 @@ label, input[type="text"] {
 
 /**************************** ID SELECTORS ****************************/
 
-#card-num{
+#card-num {
   position: absolute;
   left: 0;
   bottom: 55px;
-  min-width: 100%;
+  min-width: 447px;
   font-size: 26px;
   letter-spacing: 4px;
   text-align: center;
@@ -158,7 +159,7 @@ label, input[type="text"] {
 
 #expiration {
   position: absolute;
-  right: 40px;
+  left: 357px;
   bottom: 20px;
   font-size: 14px;
   letter-spacing: 2px;
@@ -167,7 +168,41 @@ label, input[type="text"] {
 #cvc {
   position: absolute;
   top: 98px;
-  right: 50px;
+  left: 350px;
   font-size: 14px;
   letter-spacing: 4px;
+}
+
+/**************************** MEDIA QUERY ****************************/
+
+@media(max-width: 1350px) {
+
+  .background {
+    position: relative;
+    min-height: 40vh;
+    min-width: 100%;
+    background-image: url('../images/bg-main-mobile.png');
+  }
+
+  .main-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: flex-start;
+  }
+
+  .credit-card-front {
+    top: 140px;
+    left: 45%;
+    transform: translate(-50%) scale(0.8);
+    z-index: 2;
+  }
+
+  .credit-card-back {
+    position:absolute;
+    top:30px;
+    left:55%;
+    transform:translate(-50%) scale(0.8);
+    z-index: 1;
+  }
 }
