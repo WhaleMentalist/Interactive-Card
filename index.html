@@ -6,33 +6,27 @@
   <title>Frontend Mentor | Interactive card details form</title>
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/styles.css">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript" src="js/interactive-card.js"></script>
 </head>
 <body>
-
-  <!-- 0000 0000 0000 0000
-  Jane Appleseed
-  00/00
-
-  000 -->
   <div class="main-container">
-    <div class="background">
-      <!-- Images credit card images go in here... Use relative on positioning??? -->
-      <img class="credit-card-front" src="./images/bg-card-front.png" alt="Credit Card Front">
-      <img class="credit-card-back" src="./images/bg-card-back.png" alt="Credit Card Back">
+    <div class="background image-cover">
+      <div class="credit-card-front image-cover">
+        <img src="images/bg-card-front.png" alt="Credit Card Front">
+        <p id="card-num">0000 0000 0000 0000</p>
+        <p id="credit-card-holder">Jane Appleseed</p>
+        <p id="expiration-date">00/00</p>
+      </div>
+      <div class="credit-card-back image-cover">
+        <img src="images/bg-card-back.png" alt="Credit Card Back">
+      </div>
     </div>
     <div class="card-input-container">
       <form class="" action="index.html" method="post">
@@ -41,16 +35,18 @@
           <input type="text" name="card-holder" value="" placeholder="e.g. Jane Appleseed">
         </div>
         <div class="column-container">
-          <label for="card-number">CARD NUMBER</label>
-          <input type="text" name="card-number" value="" placeholder="e.g. 1234 5678 9123 0000">
+          <label for="card-num-input">CARD NUMBER</label>
+          <input id="card-num-input" type="text" name="card-number" value="" placeholder="e.g. 1234 5678 9123 0000" maxlength="19">
         </div>
-        <div class="card-info">
-          <div class="">
+        <div class="row-container medium-gap">
+          <div>
             <label for="expiration">EXP. DATE (MM/YY)</label>
-            <input class="small-input left-float" type="text" name="expiration" value="" placeholder="MM">
-            <input class="small-input left-float" type="text" name="" value="" placeholder="YY">
+            <div class="row-container small-gap">
+              <input class="small-input left-float" type="text" name="expiration" value="" placeholder="MM">
+              <input class="small-input left-float" type="text" name="" value="" placeholder="YY">
+            </div>
           </div>
-          <div class="">
+          <div>
             <label for="cvc">CVC</label>
             <input class="medium-input" type="text" name="cvc" value="" placeholder="e.g. 123">
           </div>
