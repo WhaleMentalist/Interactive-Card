@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <title>Frontend Mentor | Interactive card details form</title>
+  <title>Frontend Mentor | Interactive Card Details Form</title>
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,6 +14,9 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script type="text/javascript" src="js/interactive-card.js"></script>
+  <script type="text/javascript" src="js/error-checking.js">
+
+  </script>
 </head>
 <body>
   <div class="main-container">
@@ -30,29 +33,33 @@
       </div>
     </div>
     <div class="card-input-container">
-      <form class="" action="index.html" method="post">
+      <form id="card-input-form" action="index.html" method="post">
         <div class="column-container">
           <label for="cardholder">CARDHOLDER NAME</label>
-          <input id="card-holder-input" type="text" name="card-holder" value="" placeholder="e.g. Jane Appleseed">
+          <input id="card-holder-input" type="text" name="card-holder" value="" placeholder="e.g. Jane Appleseed" autocomplete="off">
+          <p id="card-holder-error" class=error-text>Lorem ipsum, al et cet ipsum</p>
         </div>
         <div class="column-container">
           <label for="card-num-input">CARD NUMBER</label>
-          <input id="card-num-input" type="text" name="card-number" value="" placeholder="e.g. 1234 5678 9123 0000" maxlength="19">
+          <input id="card-num-input" type="text" name="card-number" value="" placeholder="e.g. 1234 5678 9123 0000" autocomplete="off" maxlength="19">
+          <p id="card-num-error" class=error-text>Lorem ipsum, al et cet ipsum</p>
         </div>
         <div class="row-container medium-gap">
-          <div>
+          <div class="column-container">
             <label for="expiration">EXP. DATE (MM/YY)</label>
             <div class="row-container small-gap">
-              <input id="expiration-month" class="small-input left-float" type="text" name="expiration" value="" placeholder="MM" maxlength="2">
-              <input id="expiration-year" class="small-input left-float" type="text" name="" value="" placeholder="YY" maxlength="2">
+              <input id="expiration-month" class="small-input left-float" type="text" name="expiration" value="" placeholder="MM" autocomplete="off" maxlength="2">
+              <input id="expiration-year" class="small-input left-float" type="text" name="" value="" placeholder="YY" autocomplete="off" maxlength="2">
             </div>
+            <p id="expiration-error" class=error-text>Lorem ipsum</p>
           </div>
           <div>
             <label for="cvc">CVC</label>
-            <input id="cvc-input" class="medium-input" type="text" name="cvc" value="" placeholder="e.g. 123" maxlength="3">
+            <input id="cvc-input" class="medium-input" type="text" name="cvc" value="" placeholder="e.g. 123" autocomplete="off" maxlength="3">
+            <p id="cvc-error" class=error-text>Lorem ipsum</p>
           </div>
         </div>
-        <button type="submit" name="button">Confirm</button>
+        <button id="confirm-button" type="submit" name="button">Confirm</button>
       </form>
     </div>
   </div>

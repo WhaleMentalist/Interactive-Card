@@ -1,6 +1,11 @@
 const cardSpacing = /(.{1,4})/g; // Regex to help add space every 4 characters
 const expirationFormat = /(.{2})\/(.{2})$/; // Regex will capture the date fields
 
+/*
+ * Code handles the interactive card when user inputs information
+ * into the form. It will update the card with the information. It
+ * also handles cases when there is no input (i.e default value)
+ */
 $(document).ready(function() {
 
   $('#card-num-input').on("input", function() {

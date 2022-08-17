@@ -25,9 +25,9 @@ button {
   border-radius: 5px;
 }
 
-input[type="text"] {
+input {
   padding: 0 0 0 10px;
-  margin: 10px 0 20px 0;
+  margin: 10px 0 5px 0;
   height: 40px;
   border: 2px solid var(--light-gray);
   border-radius: 5px;
@@ -60,6 +60,21 @@ label, input[type="text"] {
 }
 
 /**************************** CLASS SELECTORS ****************************/
+
+.error-border {
+  border: double 2px transparent;
+  background-image: linear-gradient(var(--white), var(--white)),
+                    linear-gradient(var(--red), var(--red));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.error-text {
+  padding: 0;
+  margin: 0 0 10px 0;
+  font-size: 12px;
+  color: var(--red);
+}
 
 .background {
   position: relative;
@@ -106,7 +121,7 @@ label, input[type="text"] {
 .credit-card-back {
   position: absolute;
   top: 452px;
-  left: 200px;
+  left: 225px;
   z-index: 1;
 }
 
@@ -205,4 +220,5 @@ label, input[type="text"] {
     transform:translate(-50%) scale(0.8);
     z-index: 1;
   }
+
 }
