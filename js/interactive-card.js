@@ -8,17 +8,17 @@ const expirationFormat = /(.{2})\/(.{2})$/; // Regex will capture the date field
  */
 $(document).ready(function() {
 
-  $('#card-num-input').on("input", function() {
+  $('#card-number-input').on("input", function() {
     let cardNumber = this.value;
 
     if(cardNumber.length === 0) {
-      $('#card-num').text("0000 0000 0000 0000");
+      $('#card-number').text("0000 0000 0000 0000");
     }
     else {
       let tokens = cardNumber.split(' ').join(''); // This will split by whitespace and join together without spaces
       let cardNumberSpace = tokens.match(cardSpacing).join(' ').trim(); // Space in groups with AT MOST 4 characters
-      $('#card-num-input').val(cardNumberSpace);
-      $('#card-num').text(cardNumberSpace);
+      $('#card-number-input').val(cardNumberSpace);
+      $('#card-number').text(cardNumberSpace);
     }
   });
 
