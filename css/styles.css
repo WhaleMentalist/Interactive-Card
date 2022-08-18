@@ -70,6 +70,10 @@ input.error {
   background-clip: padding-box, border-box;
 }
 
+input.semi-valid {
+  margin: 10px 0 5px 0;
+}
+
 label.error {
   margin: 0 0 10px 0;
   font-size: 12px;

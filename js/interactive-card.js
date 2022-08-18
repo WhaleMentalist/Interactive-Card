@@ -1,5 +1,6 @@
-const cardSpacing = /(.{1,4})/g; // Regex to help add space every 4 characters
+const cardSpacing = /(\d{1,4})/g; // Regex to help add space every 4 characters
 const expirationFormat = /(.{2})\/(.{2})$/; // Regex will capture the date fields
+const whitespace = /\s/; // Will catch variety of spaces cross browser
 
 /*
  * Code handles the interactive card when user inputs information
@@ -9,15 +10,28 @@ const expirationFormat = /(.{2})\/(.{2})$/; // Regex will capture the date field
 $(document).ready(function() {
 
   $('#card-number-input').on("input", function() {
+    let start = this.selectionStart;
     let cardNumber = this.value;
 
     if(cardNumber.length === 0) {
-      $('#card-number').text("0000 0000 0000 0000");
+      $('#card-number').text("0000 0000 0000 0000"); // Placeholder
     }
     else {
       let tokens = cardNumber.split(' ').join(''); // This will split by whitespace and join together without spaces
       let cardNumberSpace = tokens.match(cardSpacing).join(' ').trim(); // Space in groups with AT MOST 4 characters
+
+      let diff = cardNumberSpace.length - cardNumber.length;
+      console.log(diff);
+
       $('#card-number-input').val(cardNumberSpace);
+
+      // Do not change start position if current position at whitespace or input shrinks from deletion
+      if(whitespace.test(cardNumberSpace[start]) || diff < 0) {
+        $('#card-number-input')[0].setSelectionRange(start, start);
+      }
+      else {
+        $('#card-number-input')[0].setSelectionRange(start + diff, start + diff);
+      }
       $('#card-number').text(cardNumberSpace);
     }
   });
