@@ -34,6 +34,11 @@ input {
   outline: none !important;
 }
 
+svg {
+  position: relative;
+  margin: auto;
+}
+
 /*
  * Cannot use 'border-color' with a gradient.
  * The solution is to have two borders. One that
@@ -82,7 +87,7 @@ label.error {
 
 .background {
   position: relative;
-  min-height: 100vh;
+  min-height: 100%;
   min-width: 100%;
   background-image: url('../images/bg-main-desktop.png');
 }
@@ -115,14 +120,20 @@ label.error {
   background-repeat: no-repeat;
 }
 
-.credit-card-front {
+.card-logo {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.card-front {
   position: absolute;
   top: 175px;
   left: 150px;
   z-index: 1;
 }
 
-.credit-card-back {
+.card-back {
   position: absolute;
   top: 452px;
   left: 225px;
@@ -210,14 +221,14 @@ label.error {
     align-items: flex-start;
   }
 
-  .credit-card-front {
+  .card-front {
     top: 140px;
     left: 45%;
     transform: translate(-50%) scale(0.8);
     z-index: 2;
   }
 
-  .credit-card-back {
+  .card-back {
     position:absolute;
     top:30px;
     left:55%;

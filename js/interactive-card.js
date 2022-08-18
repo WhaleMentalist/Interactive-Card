@@ -20,8 +20,7 @@ $(document).ready(function() {
       let tokens = cardNumber.split(' ').join(''); // This will split by whitespace and join together without spaces
       let cardNumberSpace = tokens.match(cardSpacing).join(' ').trim(); // Space in groups with AT MOST 4 characters
 
-      let diff = cardNumberSpace.length - cardNumber.length;
-      console.log(diff);
+      let diff = cardNumberSpace.length - cardNumber.length; // Use difference to know if input has grown or shrunk
 
       $('#card-number-input').val(cardNumberSpace);
 
