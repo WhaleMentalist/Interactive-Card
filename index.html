@@ -15,17 +15,17 @@
   <link rel="stylesheet" href="./css/styles.css">
 
   <!-- jQuery, jQuery Validation, and jQuery Validation (Additional Methods) -->
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.12.0/additional-methods.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.12.0/additional-methods.js"></script>
 
   <!-- Scripts for interactive card and input form validation -->
-  <script type="text/javascript" src="js/interactive-card.js"></script>
-  <script type="text/javascript" src="js/validate.js"></script>
+  <script src="js/interactive-card.js"></script>
+  <script src="js/validate.js"></script>
 
 </head>
 <body>
-  <div class="main-container">
+  <main class="main-container">
     <div class="background image-cover">
       <div class="card-front image-cover">
         <img class="card-logo" src="./images/card-logo.svg" alt="Card Logo">
@@ -42,7 +42,7 @@
     <div class="card-input-container">
       <form id="card-input-form">
         <div class="column-container">
-          <label for="card-holder">CARDHOLDER NAME</label>
+          <label for="card-holder-input">CARDHOLDER NAME</label>
           <input id="card-holder-input" type="text" name="card-holder" value="" placeholder="e.g. Jane Appleseed" autocomplete="off">
         </div>
         <div class="column-container">
@@ -51,14 +51,14 @@
         </div>
         <div class="row-container medium-gap">
           <div class="column-container">
-            <label for="expiration">EXP. DATE (MM/YY)</label>
+            <label for="expiration-month">EXP. DATE (MM/YY)</label>
             <div class="row-container small-gap">
               <input id="expiration-month" class="small-input left-float" type="text" name="expiration-month" placeholder="MM" autocomplete="off" maxlength="2">
               <input id="expiration-year" class="small-input left-float" type="text" name="expiration-year" placeholder="YY" autocomplete="off" maxlength="2">
             </div>
           </div>
           <div>
-            <label for="cvc">CVC</label>
+            <label for="cvc-input">CVC</label>
             <input id="cvc-input" class="medium-input" type="text" name="cvc" value="" placeholder="e.g. 123" autocomplete="off" maxlength="3">
           </div>
         </div>
@@ -70,10 +70,10 @@
         <p class="completion-info">We've added your card details</p>
         <button id="continue-button" type="button" name="button">Continue</button>
       </div>
-      <div class="attribution">
+      <footer class="attribution">
         <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Spencer Daniel</a>.</p>
-      </div>
+      </footer>
     </div>
-  </div>
+  </main>
 </body>
 </html>
