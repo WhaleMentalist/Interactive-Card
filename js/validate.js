@@ -19,7 +19,10 @@ $(document).ready(function() {
 
     $('#card-input-form').validate({
       submitHandler: function(form) {
+        $('#card-input-form').addClass("hidden");
         $('#card-input-form').hide();
+
+        $('#completion-form').removeClass("hidden");
         $('#completion-form').show();
       },
       errorPlacement: function(error, element ) {
