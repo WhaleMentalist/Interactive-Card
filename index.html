@@ -12,15 +12,15 @@
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/styles.css">
 
-  <!-- External Javascript -->
+  <!-- jQuery, jQuery Validation, and jQuery Validation (Additional Methods) -->
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
   <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.12.0/additional-methods.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
 
-  <!-- Project Javascript -->
+  <!-- Scripts for interactive card and input form validation -->
   <script type="text/javascript" src="js/interactive-card.js"></script>
   <script type="text/javascript" src="js/validate.js"></script>
+
 </head>
 <body>
   <div class="main-container">
@@ -62,6 +62,15 @@
         </div>
         <button id="confirm-button" type="submit" name="button">Confirm</button>
       </form>
+      <div id="completion-form" class="column-container centered">
+        <img class="completion-logo" src="./images/icon-complete.svg" alt="Completion Icon">
+        <h1 class="completion-title">THANK YOU!</h1>
+        <p class="completion-info">We've added your card details</p>
+        <button id="continue-button" type="button" name="button">Continue</button>
+      </div>
+      <div class="attribution">
+        <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Spencer Daniel</a>.</p>
+      </div>
     </div>
   </div>
 
@@ -69,11 +78,6 @@
 
   <!-- Thank you!
   We've added your card details
-  Continue __>ß
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  Continue -->
 </body>
 </html>

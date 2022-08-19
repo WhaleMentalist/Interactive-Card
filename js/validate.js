@@ -1,10 +1,27 @@
-
 /**
  * Input validation is handled by a plugin called
  * 'jQuery Validation Plugin'
  */
 $(document).ready(function() {
-    $("#card-input-form").validate({
+    $('#completion-form').hide(); // Hide completion window initially
+
+    // Allow user to go back to form after submitting to put in other card
+    $('#continue-button').click(function() {
+      $('#card-input-form').show();
+      $('#completion-form').hide();
+
+      $('#card-input-form')[0].reset(); // Empty the fields
+      $('#card-holder').text("Jane Appleseed");
+      $('#card-number').text("0000 0000 0000 0000");
+      $('#expiration').text("MM/YY");
+      $('#cvc').text("000");
+    });
+
+    $('#card-input-form').validate({
+      submitHandler: function(form) {
+        $('#card-input-form').hide();
+        $('#completion-form').show();
+      },
       errorPlacement: function(error, element ) {
         let id = element.attr('id');
         if (id === 'expiration-month' || id === 'expiration-year') {

@@ -24,12 +24,12 @@ $(document).ready(function() {
 
       $('#card-number-input').val(cardNumberSpace);
 
-      // Do not change start position if current position at whitespace or input shrinks from deletion
+      // Set to start position if current position at whitespace or input shrinks from deletion
       if(whitespace.test(cardNumberSpace[start]) || diff < 0) {
         $('#card-number-input')[0].setSelectionRange(start, start);
       }
       else {
-        $('#card-number-input')[0].setSelectionRange(start + diff, start + diff);
+        $('#card-number-input')[0].setSelectionRange(start + diff, start + diff); // Account for adding whitespace when formatting text
       }
       $('#card-number').text(cardNumberSpace);
     }
