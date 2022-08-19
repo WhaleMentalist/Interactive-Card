@@ -215,6 +215,7 @@ label.error {
   color: var(--white);
   letter-spacing: 0.25rem;
   text-align: center;
+  text-decoration: none;
 }
 
 #card-holder {
