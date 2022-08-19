@@ -51,15 +51,15 @@ $(document).ready(function() {
         },
         'expiration-month': {
           required: true,
-          pattern: /^0[1-9]|[1-9]|1[0-2]/,
+          pattern: /^(0?[1-9]|1[0-2])$/,
         },
         'expiration-year': {
           required: true,
-          pattern: /^0[1-9]|[1-9][0-9]/,
+          pattern: /^(0[1-9]|[1-9][0-9])$/,
         },
         'cvc': {
           required: true,
-          pattern: /^[0-9]{3}/,
+          pattern: /^([0-9]{3})$/,
           minlength: 3,
           maxlength: 3,
         },

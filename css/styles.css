@@ -207,13 +207,12 @@ label.error {
 
 #card-number {
   position: absolute;
-  left: 0;
+  left: 2.3rem;
   bottom: 3.4375rem;
   min-width: 27.9375rem;
   font-size: 1.625rem;
   color: var(--white);
   letter-spacing: 0.25rem;
-  text-align: center;
   text-decoration: none;
 }
 
